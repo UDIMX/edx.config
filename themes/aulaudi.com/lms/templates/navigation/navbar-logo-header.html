@@ -10,12 +10,16 @@ from lms.djangoapps.ccx.overrides import get_current_ccx
 # App that handles subdomain specific branding
 from branding import api as branding_api
 %>
-
+<style>
+  #logo-aulaudi {
+    height: 50px;
+  }
+</style>
 <h1 class="hd logo-header">
   <div class="logo">
     <a href="${marketing_link('ROOT')}">
       <%block name="navigation_logo">
-      <img src="${static.url('images/logo.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" height="50"/>
+      <img id="logo-aulaudi" src="${static.url('images/logo.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" />
       </%block>
     </a>
   </div>
