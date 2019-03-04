@@ -17,7 +17,12 @@ main section.home header {
   height: 650px !important;
 }
 main section.home header .outer-wrapper {
-  padding: 320px 10px 0 10px;
+  padding: 320px 10px 0 10px !important;
+}
+main section.home header .outer-wrapper .title {
+  background-color: #FCCE08 !important;
+  box-shadow: 0 !important;
+  display: flex !important;
 }
 </style>
 
@@ -26,6 +31,7 @@ main section.home header .outer-wrapper {
       <header>
         <div class="outer-wrapper">
           <div class="title">
+            <div class="patron_udi"></div>
             <div class="heading-group">
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
