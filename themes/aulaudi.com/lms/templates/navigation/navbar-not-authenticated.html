@@ -9,7 +9,14 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 %>
 
+<style>
+ol li a {
+  color: #000 !important;
+}
+</style>
+
 <ol class="left list-inline nav-global">
+  <li><a href="/about">Acerca de</a></li>
   <%block name="navigation_global_links">
     % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
       <li class="item nav-global-01">
