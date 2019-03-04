@@ -26,6 +26,7 @@ main section.home header .outer-wrapper .title {
   display: flex !important;
 }
 main section.home header .outer-wrapper .title .patron_udi {
+  background-color: #FCCE08 !important;
   background-image: url('https://s3-us-west-1.amazonaws.com/festiboda/temp/patron_bg.jpg') !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
@@ -44,10 +45,8 @@ main section.home header .outer-wrapper .title .patron_udi {
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>${Text(_(u"Welcome to the Open edX{registered_trademark} platform!")).format(registered_trademark=HTML("<sup style='font-size: 65%'>&reg;</sup>"))}</h1>
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <p>${_("It works! This is the default homepage for this Open edX instance.")}</p>
+                  <h1>Aula Virtual Udi</h1>
+                  <p>Bienvenido al ecosistema en línea de recursos para el aprendizaje de la Universidad Digital de Iberoamérica.</p>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
