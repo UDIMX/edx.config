@@ -106,25 +106,6 @@
 
         ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
         <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
-
-        <div class="container-footer2">
-          <div class="udirespaldo">
-
-          </div>
-          <div class="copyudi">
-            <p>Universidad Digital de Iberoamérica &copy; 2019 Todos los derechos reservados</p>
-          </div>
-          <nav class="nav-legal" aria-label="${_('Legal')}">
-            <ul>
-              % for item_num, link in enumerate(footer['legal_links'], start=1):
-                <li class="nav-legal-0${item_num}">
-                  <a href="${link['url']}">${link['title']}</a>
-                </li>
-              % endfor
-              <li><a href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a></li>
-            </ul>
-          </nav>
-        </div>
       </div>
 
       ## Please leave this link and use one of the logos provided
@@ -140,6 +121,25 @@
         </p>
       </div>
       % endif
+
+      <div class="container-footer2">
+        <div class="udirespaldo">
+
+        </div>
+        <div class="copyudi">
+          <p>Universidad Digital de Iberoamérica &copy; 2019 Todos los derechos reservados</p>
+        </div>
+        <nav class="nav-legal" aria-label="${_('Legal')}">
+          <ul>
+            % for item_num, link in enumerate(footer['legal_links'], start=1):
+              <li class="nav-legal-0${item_num}">
+                <a href="${link['url']}">${link['title']}</a>
+              </li>
+            % endfor
+            <li><a href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
   </div>
 % endif
