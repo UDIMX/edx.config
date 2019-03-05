@@ -9,6 +9,32 @@
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
 
+<style>
+wrapper.wrapper-footer {
+  background-color: #404041 !important;
+  border-top: 0 !important;
+}
+.wrapper.wrapper-footer footer nav ol li a {
+  font-size: 1em !important;
+  text-transform: uppercase !important;
+  color: #FFF !important;
+}
+wrapper.wrapper-footer .wrapper-logo p {
+  color: #FFF !important;
+}
+wrapper.wrapper-footer .wrapper-logo p.estela {
+    font-size: 0.7em !important;
+    font-weight: 700 !important;
+}
+wrapper.wrapper-footer .wrapper-logo p.estela {
+    font-size: 0.9em !important;
+    font-weight: 700 !important;
+}
+wrapper.wrapper-footer .wrapper-logo p.hide {
+  display: none !important;
+}
+</style>
+
 % if uses_bootstrap:
   <div class="container-fluid wrapper-footer">
     <footer>
@@ -84,12 +110,12 @@
         % endif
 
         <div class="wrapper-logo">
-          <p>Iberoamérica es la estela de<br/>
+          <p class="estela">Iberoamérica es la estela de<br/>
             una transformación constante.<br/>
             Somos más que una sola historia,<br/>
             una sola versión.
           </p>
-          <p>Somos mentes en moviemiento</p>
+          <p class="movimiento">Somos mentes en moviemiento</p>
           <p class="hide">
             <a href="/">
               ## The default logo is a placeholder.
