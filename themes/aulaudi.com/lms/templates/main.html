@@ -225,7 +225,7 @@ from pipeline_mako import render_require_js_path_overrides
         <%include file="/preview_menu.html" />
     % endif
 
-    <div class="content-wrapper ${"container-fluid" if uses_bootstrap else "" } ${static.get_page_title_breadcrumbs(section_title)} ${static.get_page_title_breadcrumbs(sequence_title)} main-container" id="content">
+    <div class="content-wrapper ${"container-fluid" if uses_bootstrap else "" } ${static.get_page_title_breadcrumbs(sequence_title, section_title, course_name())} main-container" id="content">
       ${self.body()}
       <%block name="bodyextra"/>
     </div>
