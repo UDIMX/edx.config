@@ -143,7 +143,7 @@ from pipeline_mako import render_require_js_path_overrides
       font-weight: 700 !important;
     }
     .content-wrapper.main-container .container.about {
-      padding-top: 150px !important;
+      padding-top: 50px !important;
     }
   </style>
 
@@ -225,7 +225,7 @@ from pipeline_mako import render_require_js_path_overrides
         <%include file="/preview_menu.html" />
     % endif
 
-    <div class="content-wrapper ${"container-fluid" if uses_bootstrap else "" } ${_("PAGE NAME")} main-container" id="content">
+    <div class="content-wrapper ${"container-fluid" if uses_bootstrap else "" } ${static.get_page_title_breadcrumbs(section_title)} ${static.get_page_title_breadcrumbs(sequence_title)} main-container" id="content">
       ${self.body()}
       <%block name="bodyextra"/>
     </div>
